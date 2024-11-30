@@ -12,6 +12,8 @@ try:
     import fade
     from colorama import Fade
 
+
+os.system("clear")
 logo =  """
         @ @ @ @ @    @     @ @ @ @ @ @ @    @ @ @  @       @
         @         @  @      @         @   @        @     @
@@ -20,13 +22,7 @@ logo =  """
         @         @  @         @   @     @         @   @   
         @         @  @          @ @       @        @     @
         @ @ @ @ @    @ @ @ @ @   @          @ @ @  @       @
-      
-        @ @ @      @ @    @     @  @ @ @ @  @ @ @ @  @ @ @
-              @  @     @  @ @   @     @     @        @     @
-        @ @ @    @ @ @ @  @   @ @     @     @ @ @    @ @ @
-        @        @     @  @     @     @     @ @ @ @  @     @
-
-        """
+       """
 
 def HTTP_ATTACK(threads, attack_time, target):
 	# Finish
