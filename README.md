@@ -9,4 +9,4 @@
 
   - pip install asyncio
 
-  - python3 
+  - python3 conflix-ddos.py
