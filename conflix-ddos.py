@@ -19,13 +19,13 @@ logo = """
      ±±   ±± ±±    ±±     ±±  ±±       ±±  ±±  ±±     ±±
        ±± ±±                  ±±       ±±
 _—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—__—_—_—_——_—_—_
-_— "\033[34m TOOLS TO DETECT AND DROPPING WEBSITES     \033[0m"         
-_— "\033[32m              DESIGN BY: KF24              \033[0m"
-_— "\033[33m IF IN DOUBT OF ACCURACY, PLEASE HELP      \033[0m"
-_— "\033[91m            BY CHECKING THE HOST           \033[0m"
-_— "\033[36m                  ——oO0Oo——                \033[0m"
+_— "\033[34m TOOLS TO DETECT AND DROPPING WEBSITES     \033[0m")         
+_— "\033[32m              DESIGN BY: KF24              \033[0m")
+_— "\033[33m IF IN DOUBT OF ACCURACY, PLEASE HELP      \033[0m")
+_— "\033[91m            BY CHECKING THE HOST           \033[0m")
+_— "\033[36m                  ——oO0Oo——                \033[0m")
 _—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_
-""")
+"""
 faded_text = fade.fire(logo)
 print(faded_text)
 socket.socket(socket.AF_INET, socket.SOCK_STREAM)
