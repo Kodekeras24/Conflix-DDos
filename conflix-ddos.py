@@ -11,25 +11,19 @@ else:  # Unix/Linux/Mac
     os.system("clear")
 
 logo = """
-
+   ±± ±± 
+ ±±   ±± ±±    ±±   ±±
+±±  ±±     ±±  ±± ±±  ±±
+±±  ±±     ±±  ±±     ±±
+±±  ±±     ±±  ±±     ±±
+ ±±   ±± ±±    ±±     ±±
+   ±± ±±
 """
 faded_text = fade.fire(logo)
 print(faded_text)
 socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ask = fade.pinkred("Enter the target IP/URL:")
 url = input(ask)
-time.sleep(5),
-print("\033[96m                  ⟩⟩  WELCOME \033[0m "),
-time.sleep(5),
-print("\033[92m                  ⟩⟩  TO ZONA ATTACK \033[0m "),
-time.sleep(5),
-print("\033[1m                  ⟩⟩  DON'T STOP FIGHT \033[0m "),
-time.sleep(5),
-print("\033[97m                  ⟩⟩  BECAUSE OF PALESTINE \033[0m "),
-time.sleep(5),
-print("\033[95m                  ⟩⟩  STILL BURNING \033[0m "),
-time.sleep(5),
-
 async def increment_view_count(session):
     try:
         async with session.get(url) as response:
