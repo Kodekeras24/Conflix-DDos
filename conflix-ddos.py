@@ -19,7 +19,7 @@ logo = """
      ±±   ±± ±±    ±±     ±±  ±±       ±±  ±±  ±±     ±±
        ±± ±±                  ±±       ±±
 _—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—__—_—_—_——_—_—_
-_— "\033[34m        TOOLS TO DETECT AND DROPPING WEBSITES              \033[0m")         
+_— "\033[34m        TOOLS TO DETECT AND DROPPING WEBSITES              \033[0m")    
 _— "\033[32m                     DESIGN BY: KF24                       \033[0m")
 _— "\033[33m        IF IN DOUBT OF ACCURACY, PLEASE HELP               \033[0m")
 _— "\033[91m                   BY CHECKING THE HOST                    \033[0m")
@@ -39,7 +39,8 @@ async def increment_view_count(session):
                 print("[+]  \033[32mRequest Sent \033[33m" +url+" :::...\033[34mattack..!!  \033[0m")
                 print("[+]  \033[95mRequest Sent \033[96m" +url+" :::...\033[92mattack..!!  \033[0m")
             else:
-                print("[+]  \033[32mRequest Sent \033[33m" +url+" attack..!!  \033[0m")
+                print("[!]  \033[96mRequest Sent \033[32m" +url+"  \033[33mattack..!!  \033[0m")
+                print("[!]  \033[94mRequest Sent \033[96m" +url+"  \033[37mattack..!!  \033[0m")
     except aiohttp.ClientError as e:
         print("[💥]  \033[34mAn error occurred:\033[0m", e)
 
