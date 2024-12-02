@@ -28,7 +28,7 @@ async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-                print("PINGED THIS SHI!")
+                print("[+]  \033[32mRequest Sent \033[33m" +url+" down..!!  \033[0m")
             else:
                 print("Failed ping.")
     except aiohttp.ClientError as e:
