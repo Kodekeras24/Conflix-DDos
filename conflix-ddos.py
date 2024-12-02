@@ -36,9 +36,9 @@ async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-                print("[+]  \033[32mRequest Sent \033[33m" +url+" :::...\033[1mdown..!!  \033[0m")
+                print("[+]  \033[32mRequest Sent \033[33m" +url+" :::...\033[34mattack..!!  \033[0m")
             else:
-                print("[+]  \033[32mRequest Sent \033[33m" +url+" down..!!  \033[0m")
+                print("[+]  \033[32mRequest Sent \033[33m" +url+" attack..!!  \033[0m")
     except aiohttp.ClientError as e:
         print("[💥]  \033[34mAn error occurred:\033[0m", e)
 
