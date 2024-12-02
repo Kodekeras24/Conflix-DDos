@@ -4,6 +4,7 @@ import asyncio
 import aiohttp
 import fade
 import os
+import requests
 # Clear command prompt based on the operating system
 if os.name == "nt":  # Windows
     os.system("cls")
@@ -36,11 +37,11 @@ async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-                print("[+]  \033[32mRequest Sent \033[33m" +url+"  \033[34mattack..!!  \033[0m")
-                print("[+]  \033[95mRequest Sent \033[96m" +url+"  \033[92mattack..!!  \033[0m")
+                print("[+]  \033[32mRequest Sent  \033[33m" +url+"  \033[34mattack..!!  \033[0m")
+                print("[+]  \033[95mRequest Sent  \033[96m" +url+"  \033[92mattack..!!  \033[0m")
             else:
-                print("[!]  \033[96mRequest Sent \033[32m" +url+"  \033[33mattack..!!  \033[0m")
-                print("[!]  \033[94mRequest Sent \033[96m" +url+"  \033[37mattack..!!  \033[0m")
+                print("[!]  \033[96mRequest Sent  \033[32m" +url+"  \033[33mattack..!!  \033[0m")
+                print("[!]  \033[94mRequest Sent  \033[96m" +url+"  \033[37mattack..!!  \033[0m")
     except aiohttp.ClientError as e:
         print("[💥]  \033[34mAn error occurred:\033[0m", e)
 
