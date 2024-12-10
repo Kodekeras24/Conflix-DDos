@@ -20,11 +20,11 @@ logo = """
             ±±   ±± ±±    ±±     ±±  ±±       ±±  ±±  ±±     ±±
               ±± ±±                  ±±       ±±
 ╔═══════════════════════════════════════════════════════════════════╗
-║\033[34m               TOOLS TO DETECT AND DROPPING WEBSITES_                \033[31m║
-║\033[32m                          DESIGN BY: KF'24                         \033[31m║
-║\033[33m                IF IN DOUBT OF ACCURACY, PLEASE HELP                 \033[31m║
-║\033[91m                        BY CHECKING THE HOST                      \033[31m║
-║\033[36m                             ——oO0Oo——                           \033[31m║
+║\033[34m               TOOLS TO DETECT AND DROPPING WEBSITES_           \033[31m║
+║\033[32m                          DESIGN BY: KF'24                      \033[31m║
+║\033[33m                IF IN DOUBT OF ACCURACY, PLEASE HELP            \033[31m║
+║\033[91m                        BY CHECKING THE HOST                    \033[31m║
+║\033[36m                             ——oO0Oo——                          \033[31m║
 ╚═══════════════════════════════════════════════════════════════════╝
 """
 faded_text = fade.fire(logo)
