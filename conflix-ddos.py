@@ -20,18 +20,18 @@ logo = """
             ±±   ±± ±±    ±±     ±±  ±±       ±±  ±±  ±±     ±±
               ±± ±±                  ±±       ±±
 ╔═══════════════════════════════════════════════════════════════════╗
-║\033[34m               TOOLS TO DETECT AND DROPPING WEBSITES                  \033[31m║
-║\033[32m                            DESIGN BY: KF24                           \033[31m║
-║\033[33m               IF IN DOUBT OF ACCURACY, PLEASE HELP                   \033[31m║
-║\033[91m                          BY CHECKING THE HOST                        \033[31m║
-║\033[36m                                ——oO0Oo——                             \033[31m║
+║\033[34m               TOOLS TO DETECT AND DROPPING WEBSITES                \033[31m║
+║\033[32m                            DESIGN BY: KF24                         \033[31m║
+║\033[33m               IF IN DOUBT OF ACCURACY, PLEASE HELP                 \033[31m║
+║\033[91m                          BY CHECKING THE HOST                      \033[31m║
+║\033[36m                                ——oO0Oo——                           \033[31m║
 ╚═══════════════════════════════════════════════════════════════════╝
 """
 faded_text = fade.fire(logo)
 print(faded_text)
 socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 addr = (str(),int())
-ask = fade.pinkred("Enter the target URL:")
+ask = fade.pinkred("\033[33mEnter the target URL: \033[0m")
 url = input(ask)
 async def increment_view_count(session):
     try:
